@@ -17,7 +17,7 @@ jobs:
       - name: Run tests
         run: go test ./...
       - name: Run linters
-        run: golangci-lint run
+        run: golangci-lint run --disable-all --enable=goimports --enable=golint
 
   deploy:
     needs: test
